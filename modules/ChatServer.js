@@ -49,13 +49,10 @@ class ChatServer {
     this.io.emit('message', response)
   }
 
-  handleConnect (socket, id) {
-    id && User.findById(id, (err, user) => {
-      if (user) {
-        this.online.push({ user, socket })
-        console.info(`(name: ${user.name} / id: ${user.id}) connected`)
-      }
-    })
+  async handleConnect (socket, id) {
+    const user = id && await User.findById(id)
+    this.online.push({ user, socket })
+    console.info(`(name: ${user.name} / id: ${user.id}) connected`)
   }
 
   handleDisconnect (socket) {
