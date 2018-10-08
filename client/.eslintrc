@@ -1,0 +1,26 @@
+{
+  "env": {
+    "jest": true
+  },
+  "extends": ["eslint:recommended", "plugin:react/recommended", "standard"],
+  "parser": "babel-eslint",
+  "plugins": ["react"],
+  "rules": {
+    "import/export": "error",
+    "import/order": "error",
+    "comma-dangle": ["error", "always-multiline"],
+    "prefer-const": ["error", {"destructuring": "all"}],
+    "lines-between-class-members": ["error", "always"],
+    "object-curly-spacing": ["error", "always"],
+    "curly": ["error", "all"],
+    "arrow-body-style": ["error", "as-needed"],
+    "arrow-parens": ["error", "always"],
+    "array-bracket-spacing": ["error", "always"],
+    "no-console": ["error", { "allow": ["warn", "error", "info"] }],
+    "react/jsx-uses-vars": "error",
+    "react/sort-comp": "error",
+    "max-len": ["error", {
+      "code": 120, "ignoreTrailingComments": true, "ignoreUrls": true, "ignoreTemplateLiterals": true
+    }]
+  }
+}

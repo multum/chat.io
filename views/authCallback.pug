@@ -1,0 +1,6 @@
+extends layout
+
+block content
+    script
+        | window.opener.postMessage({ user: !{JSON.stringify(user)} }, '*')
+        | window.close()

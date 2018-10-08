@@ -1,0 +1,21 @@
+{
+  "env": {
+    "jest": true
+  },
+  "extends": ["eslint:recommended", "standard"],
+  "rules": {
+    "import/export": "error",
+    "comma-dangle": ["error", "always-multiline"],
+    "prefer-const": ["error", {"destructuring": "all"}],
+    "lines-between-class-members": ["error", "always"],
+    "object-curly-spacing": ["error", "always"],
+    "curly": ["error", "all"],
+    "arrow-body-style": ["error", "as-needed"],
+    "arrow-parens": ["error", "always"],
+    "array-bracket-spacing": ["error", "always"],
+    "no-console": ["error", { "allow": ["warn", "error", "info"] }],
+    "max-len": ["error", {
+      "code": 120, "ignoreTrailingComments": true, "ignoreUrls": true, "ignoreTemplateLiterals": true
+    }]
+  }
+}
